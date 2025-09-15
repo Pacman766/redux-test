@@ -97,5 +97,3 @@ const logger = store => next => action => {
 };
 
 logger();
-
-console.log('Hotfix input');
