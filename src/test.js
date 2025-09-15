@@ -15,7 +15,6 @@
 // console.log(dog.eats); // true (нашёлся в прототипе)
 // dog.walk();            // "Animal walks"
 
-
 // let person = {
 //     say() { console.log('Hello')},
 //     eat: true
@@ -62,8 +61,6 @@
 // console.log(sumCache(2, 4)); // calc
 // console.log(sumCache(1, 2)); // get from cache
 
-
-
 // let user1 = { name: "Alice" };
 // let user2 = { name: "Bob" };
 
@@ -80,7 +77,6 @@
 // console.log(visitedUsers.has(user1)); // true
 // // Теперь объект {name: "Alice"} будет удалён GC из WeakSet автоматически
 
-
 // let user = { name: "Charlie" };
 
 // const userMeta = new WeakMap();
@@ -95,11 +91,11 @@
 
 // // Объект { name: "Charlie" } и его метаданные будут удалены сборщиком мусора
 
-
-
-const logger = (store) => (next) => (action) => {
-  console.log('dispatching', action);
-  return next(action);
+const logger = store => next => action => {
+	console.log('dispatching', action);
+	return next(action);
 };
 
 logger();
+
+console.log('Hotfix input');
