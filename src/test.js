@@ -98,4 +98,4 @@ const logger = store => next => action => {
 
 logger();
 
-console.log('Input feature v1');
+console.log('Hotfix input');
