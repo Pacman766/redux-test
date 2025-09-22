@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import todoSlice from '../slices/todoSlice';
+import { userSlice } from '../slices/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const store = configureStore({
-  reducer: {
-    todos: todoSlice,
-  },
+	reducer: {
+		users: userSlice.reducer,
+	},
 });
 
-export const useAppDispatch = useDispatch.withTypes<typeof store.dispatch>();
 export const useAppSelector = useSelector.withTypes<ReturnType<typeof store.getState>>();
+export const useAppDispatch = useDispatch.withTypes<typeof store.dispatch>();
