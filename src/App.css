@@ -1,5 +1,9 @@
 --activecolor: rgba(39, 209, 39, 1);
 
 .active-link {
-  color: rgba(39, 209, 39, 1);
+	color: rgba(39, 209, 39, 1);
+}
+
+.todo-completed {
+	text-decoration: line-through;
 }
